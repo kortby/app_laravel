@@ -20,8 +20,6 @@
 
 -   Run the following commands
 
-`php artisan serve`
-
 `composer install`
 
 `composer dumpautoload -o`
