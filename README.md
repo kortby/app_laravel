@@ -8,8 +8,43 @@
 
 -   The members only page would contain:
 
-    -   a list of posts submitted by other users
+    -   A list of posts submitted by other users
 
-    -   ability to submit a post (can be as simple as a message)
+    -   Ability to submit a post (can be as simple as a message)
 
-    -   ability to edit the post, if the authenticated user is the owner
+    -   Ability to edit the post, if the authenticated user is the owner
+
+# Setup:
+
+-   Download the files the go to terminal and cd to `app_laravel` directory
+
+-   Run the following commands
+
+`php artisan serve`
+
+`composer install`
+
+`composer dumpautoload -o`
+
+```
+php artisan config:cache
+php artisan config:clear
+php artisan cache:clear
+composer dump-autoload
+```
+
+-   Create MySql database name `dreamworld` by runing"
+
+`mysql -uroot`
+
+`create database dreamworld;`
+
+`quit;`
+
+-   Next step is to migrate database by running `php artisan migrate`
+
+-   The last step is to add some random data `php artisan db:seed`
+
+-   Then run the app `php artisan serve`
+
+Now you can visit the site locally on this url `http://127.0.0.1:8000`
