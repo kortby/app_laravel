@@ -14,6 +14,8 @@
 
     -   Ability to edit the post, if the authenticated user is the owner
 
+![](public/img/demo1.gif)
+
 # Setup:
 
 -   Download the files the go to terminal and cd to `app_laravel` directory
