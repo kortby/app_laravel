@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostStoreRequest;
+use App\Mail\CardExpire;
 use App\Models\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +30,8 @@ class PostController extends Controller
      */
     public function create()
     {
-
+        $user = auth()->user();
+        Mail::to('kortby@gmail.com')->send(new CardExpire($user));
         return view('posts.create');
     }
 
